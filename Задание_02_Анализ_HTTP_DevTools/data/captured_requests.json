@@ -1,0 +1,257 @@
+{
+  "/login": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/login",
+      "status": 200,
+      "status_text": "OK",
+      "req_headers": {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "ru-RU",
+        "connection": "keep-alive",
+        "host": "127.0.0.1:5000",
+        "sec-fetch-dest": "document",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "none",
+        "sec-fetch-user": "?1",
+        "upgrade-insecure-requests": "1"
+      },
+      "res_headers": {
+        "connection": "close",
+        "content-length": "3455",
+        "content-security-policy": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; frame-ancestors 'none'; form-action 'self'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 22 Oct 2026 12:44:56 GMT",
+        "referrer-policy": "same-origin",
+        "server": "Werkzeug/3.1.9 Python/3.12.14",
+        "set-cookie": "conf_session=eyJfY3NyZiI6ImpmWm9TajRHNGVfM3k1dE44NGZlOTZlc19LbUtOVFZSUnEyWTdEXzVUYVUifQ.atoFSA.xJ62KPZaXtmKJ-LtCN4wg0Rbdco; HttpOnly; Path=/; SameSite=Lax",
+        "vary": "Cookie",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      },
+      "req_body": null,
+      "res_body": "<!DOCTYPE html>\n<html lang=\"ru\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"jfZoSj4G4e_3y5tN84fe96es_KmKNTVRRq2Y7D_5TaU\">\n    <meta name=\"description\" content=\"Конференции.РФ — бронирование помещений для проведения Всероссийских конференций\">\n    <title>Авторизация — Конференции.РФ</title>\n    <link rel=\"icon\" type=\"image/png\" href=\"/static/img/logo-32.png\">\n    <link rel=\"preload\" href=\"/static/fonts/PTSans-Regular.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n    <link rel=\"stylesheet\" href=\"/static/css/style.css\">\n</head>\n<body>\n<header class=\"header\">\n    <div class=\"container header__inner\">\n        <a class=\"logo\" href=\"/\">\n            <img src=\"/static/img/logo-64.png\" width=\"36\" height=\"36\" alt=\"\">\n            <span>Конференции<b>.РФ</b></span>\n        </a>\n        <button class=\"burger\" type=\"button\" aria-label=\"Меню\" aria-expanded=\"false\" data-burger><span></span></button>\n        <nav class=\"nav\" data-nav>\n            \n            <a href=\"/\" class=\"\">Помещения</a>\n            \n                <a href=\"/login\" class=\"active\">Вход</a>\n                <a href=\"/register\" class=\"\">Регистрация</a>\n            \n        </nav>\n    </div>\n</header>\n\n<main>\n    <div class=\"container page\" data-page>\n        \n<section class=\"auth card\">\n    <h1>Авторизация</h1>\n    <form class=\"form\" id=\"login-form\" novalidate>\n        <div class=\"form-alert\" data-form-alert hidden></div>\n        <div class=\"field\">\n            <label for=\"login\">Логин</label>\n            <input id=\"login\" name=\"login\" autocomplete=\"username\" maxlength=\"50\" required>\n            <div class=\"field__error\" data-error-for=\"login\"></div>\n        </div>\n        <div class=\"field\">\n            <label for=\"password\">Пароль</label>\n            <div class=\"pwd\">\n                <input id=\"password\" name=\"password\" type=\"password\" autocomplete=\"current-password\" maxlength=\"128\" required>\n                <button class=\"pwd__toggle\" type=\"button\" data-toggle-pwd=\"password\" aria-label=\"Показать пароль\">👁</button>\n            </div>\n            <div class=\"field__error\" data-error-for=\"password\"></div>\n        </div>\n        <button class=\"btn btn--primary btn--block\" type=\"submit\">Войти</button>\n        <p class=\"form-switch\">Еще не зарегистрированы? <a href=\"/register\">Регистрация</a></p>\n    </form>\n</section>\n\n    </div>\n</main>\n\n<footer class=\"footer\">\n    <div class=\"container footer__inner\">\n        <span>© 2027 Конференции.РФ — бронирование помещений для Всероссийских конференций</span>\n        <div class=\"social\">\n            <a href=\"#\" aria-label=\"ВКонтакте\"><img src=\"/static/img/social-vk.png\" width=\"32\" height=\"32\" alt=\"ВКонтакте\" loading=\"lazy\"></a>\n            <a href=\"#\" aria-label=\"Одноклассники\"><img src=\"/static/img/social-ok.png\" width=\"32\" height=\"32\" alt=\"Одноклассники\" loading=\"lazy\"></a>\n        </div>\n    </div>\n</footer>\n\n<div class=\"toasts\" data-toasts aria-live=\"polite\"></div>\n<script src=\"/static/js/common.js\" defer></script>\n<script src=\"/static/js/login.js\" defer></script>\n</body>\n</html>"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/login",
+      "status": 200,
+      "status_text": "OK",
+      "req_headers": {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "ru-RU",
+        "cache-control": "max-age=0",
+        "connection": "keep-alive",
+        "cookie": "conf_session=eyJfY3NyZiI6ImpmWm9TajRHNGVfM3k1dE44NGZlOTZlc19LbUtOVFZSUnEyWTdEXzVUYVUifQ.atoFSA.xJ62KPZaXtmKJ-LtCN4wg0Rbdco",
+        "host": "127.0.0.1:5000",
+        "sec-fetch-dest": "document",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "none",
+        "sec-fetch-user": "?1",
+        "upgrade-insecure-requests": "1"
+      },
+      "res_headers": {
+        "connection": "close",
+        "content-length": "3455",
+        "content-security-policy": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; frame-ancestors 'none'; form-action 'self'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 22 Oct 2026 12:45:12 GMT",
+        "referrer-policy": "same-origin",
+        "server": "Werkzeug/3.1.9 Python/3.12.14",
+        "vary": "Cookie",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      },
+      "req_body": null,
+      "res_body": "<!DOCTYPE html>\n<html lang=\"ru\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"jfZoSj4G4e_3y5tN84fe96es_KmKNTVRRq2Y7D_5TaU\">\n    <meta name=\"description\" content=\"Конференции.РФ — бронирование помещений для проведения Всероссийских конференций\">\n    <title>Авторизация — Конференции.РФ</title>\n    <link rel=\"icon\" type=\"image/png\" href=\"/static/img/logo-32.png\">\n    <link rel=\"preload\" href=\"/static/fonts/PTSans-Regular.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n    <link rel=\"stylesheet\" href=\"/static/css/style.css\">\n</head>\n<body>\n<header class=\"header\">\n    <div class=\"container header__inner\">\n        <a class=\"logo\" href=\"/\">\n            <img src=\"/static/img/logo-64.png\" width=\"36\" height=\"36\" alt=\"\">\n            <span>Конференции<b>.РФ</b></span>\n        </a>\n        <button class=\"burger\" type=\"button\" aria-label=\"Меню\" aria-expanded=\"false\" data-burger><span></span></button>\n        <nav class=\"nav\" data-nav>\n            \n            <a href=\"/\" class=\"\">Помещения</a>\n            \n                <a href=\"/login\" class=\"active\">Вход</a>\n                <a href=\"/register\" class=\"\">Регистрация</a>\n            \n        </nav>\n    </div>\n</header>\n\n<main>\n    <div class=\"container page\" data-page>\n        \n<section class=\"auth card\">\n    <h1>Авторизация</h1>\n    <form class=\"form\" id=\"login-form\" novalidate>\n        <div class=\"form-alert\" data-form-alert hidden></div>\n        <div class=\"field\">\n            <label for=\"login\">Логин</label>\n            <input id=\"login\" name=\"login\" autocomplete=\"username\" maxlength=\"50\" required>\n            <div class=\"field__error\" data-error-for=\"login\"></div>\n        </div>\n        <div class=\"field\">\n            <label for=\"password\">Пароль</label>\n            <div class=\"pwd\">\n                <input id=\"password\" name=\"password\" type=\"password\" autocomplete=\"current-password\" maxlength=\"128\" required>\n                <button class=\"pwd__toggle\" type=\"button\" data-toggle-pwd=\"password\" aria-label=\"Показать пароль\">👁</button>\n            </div>\n            <div class=\"field__error\" data-error-for=\"password\"></div>\n        </div>\n        <button class=\"btn btn--primary btn--block\" type=\"submit\">Войти</button>\n        <p class=\"form-switch\">Еще не зарегистрированы? <a href=\"/register\">Регистрация</a></p>\n    </form>\n</section>\n\n    </div>\n</main>\n\n<footer class=\"footer\">\n    <div class=\"container footer__inner\">\n        <span>© 2027 Конференции.РФ — бронирование помещений для Всероссийских конференций</span>\n        <div class=\"social\">\n            <a href=\"#\" aria-label=\"ВКонтакте\"><img src=\"/static/img/social-vk.png\" width=\"32\" height=\"32\" alt=\"ВКонтакте\" loading=\"lazy\"></a>\n            <a href=\"#\" aria-label=\"Одноклассники\"><img src=\"/static/img/social-ok.png\" width=\"32\" height=\"32\" alt=\"Одноклассники\" loading=\"lazy\"></a>\n        </div>\n    </div>\n</footer>\n\n<div class=\"toasts\" data-toasts aria-live=\"polite\"></div>\n<script src=\"/static/js/common.js\" defer></script>\n<script src=\"/static/js/login.js\" defer></script>\n</body>\n</html>"
+    }
+  ],
+  "/api/login": [
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:5000/api/login",
+      "status": 401,
+      "status_text": "UNAUTHORIZED",
+      "req_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "ru-RU",
+        "connection": "keep-alive",
+        "content-length": "44",
+        "content-type": "application/json",
+        "cookie": "conf_session=eyJfY3NyZiI6ImpmWm9TajRHNGVfM3k1dE44NGZlOTZlc19LbUtOVFZSUnEyWTdEXzVUYVUifQ.atoFSA.xJ62KPZaXtmKJ-LtCN4wg0Rbdco",
+        "host": "127.0.0.1:5000",
+        "referer": "http://127.0.0.1:5000/login",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "x-csrf-token": "jfZoSj4G4e_3y5tN84fe96es_KmKNTVRRq2Y7D_5TaU"
+      },
+      "res_headers": {
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "158",
+        "content-security-policy": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; frame-ancestors 'none'; form-action 'self'",
+        "content-type": "application/json",
+        "date": "Thu, 22 Oct 2026 12:45:16 GMT",
+        "referrer-policy": "same-origin",
+        "server": "Werkzeug/3.1.9 Python/3.12.14",
+        "vary": "Cookie",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      },
+      "req_body": "{\"login\":\"Conf2027\",\"password\":\"wrong-pass\"}",
+      "res_body": "{\"errors\":{\"form\":\"\\u041d\\u0435\\u0432\\u0435\\u0440\\u043d\\u044b\\u0439 \\u043b\\u043e\\u0433\\u0438\\u043d \\u0438\\u043b\\u0438 \\u043f\\u0430\\u0440\\u043e\\u043b\\u044c\"}}\n"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:5000/api/login",
+      "status": 200,
+      "status_text": "OK",
+      "req_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "ru-RU",
+        "connection": "keep-alive",
+        "content-length": "40",
+        "content-type": "application/json",
+        "cookie": "conf_session=eyJfY3NyZiI6ImpmWm9TajRHNGVfM3k1dE44NGZlOTZlc19LbUtOVFZSUnEyWTdEXzVUYVUifQ.atoFSA.xJ62KPZaXtmKJ-LtCN4wg0Rbdco",
+        "host": "127.0.0.1:5000",
+        "referer": "http://127.0.0.1:5000/login",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "x-csrf-token": "jfZoSj4G4e_3y5tN84fe96es_KmKNTVRRq2Y7D_5TaU"
+      },
+      "res_headers": {
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "108",
+        "content-security-policy": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; frame-ancestors 'none'; form-action 'self'",
+        "content-type": "application/json",
+        "date": "Thu, 22 Oct 2026 12:45:26 GMT",
+        "referrer-policy": "same-origin",
+        "server": "Werkzeug/3.1.9 Python/3.12.14",
+        "set-cookie": "conf_session=.eJxNjkEKwyAQRa9S_tqFGiHFba8RCGkdg5BosHEVcvfacZFsHn_e_IE5MG6U1ylS3GH3XEjAhwSLoUij5J-dYX6YT6a7slFMzWx9eZmOmn_w4O_qVmpn75YhsKQ5xPrDK0Wvpe6rymmhaia31o1A-VIeg4NV5w_4RDis.atoFZg.oFdEHRjjaHim_aj-w0AhizySc94; Expires=Thu, 22 Oct 2026 14:45:26 GMT; HttpOnly; Path=/; SameSite=Lax",
+        "vary": "Cookie",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      },
+      "req_body": "{\"login\":\"Conf2027\",\"password\":\"Demo77\"}",
+      "res_body": "{\"message\":\"\\u0412\\u0445\\u043e\\u0434 \\u0432\\u044b\\u043f\\u043e\\u043b\\u043d\\u0435\\u043d\",\"redirect\":\"/admin\"}\n"
+    }
+  ],
+  "/admin": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/admin",
+      "status": 200,
+      "status_text": "OK",
+      "req_headers": {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "ru-RU",
+        "connection": "keep-alive",
+        "cookie": "conf_session=.eJxNjkEKwyAQRa9S_tqFGiHFba8RCGkdg5BosHEVcvfacZFsHn_e_IE5MG6U1ylS3GH3XEjAhwSLoUij5J-dYX6YT6a7slFMzWx9eZmOmn_w4O_qVmpn75YhsKQ5xPrDK0Wvpe6rymmhaia31o1A-VIeg4NV5w_4RDis.atoFZg.oFdEHRjjaHim_aj-w0AhizySc94",
+        "host": "127.0.0.1:5000",
+        "referer": "http://127.0.0.1:5000/login",
+        "sec-fetch-dest": "document",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-user": "?1",
+        "upgrade-insecure-requests": "1"
+      },
+      "res_headers": {
+        "connection": "close",
+        "content-length": "4562",
+        "content-security-policy": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; frame-ancestors 'none'; form-action 'self'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 22 Oct 2026 12:45:27 GMT",
+        "referrer-policy": "same-origin",
+        "server": "Werkzeug/3.1.9 Python/3.12.14",
+        "set-cookie": "conf_session=.eJxNjl0LgjAUhv9KnGuFqYPKy4rqog8Ci4xA1G1O0C02pSL6763tQm8e3vOcD84HslIrBjEkaX46XHXy8jfFak8vcrtIb_5brDlfkvm54sedJrjlTD7Bg-xBVZsLKjqIO9VTD1gtzZV7j3CA_oywZWk5syRDxoFlaOnm0WAi6vzEFmysRkNurXDZ_NTIqhbmh6UULETh1CglG2pMTlrT8aDXVGU1gTj4_gCgYUqu.atoFZw.5HhsAj8F_bZrhAxwUROCLIyvT_E; Expires=Thu, 22 Oct 2026 14:45:27 GMT; HttpOnly; Path=/; SameSite=Lax",
+        "vary": "Cookie",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      },
+      "req_body": null,
+      "res_body": "<!DOCTYPE html>\n<html lang=\"ru\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"TYaQNXsTx-GbDMeVoHBYZ-ynFhhCd9UghOLsd4mhfow\">\n    <meta name=\"description\" content=\"Конференции.РФ — бронирование помещений для проведения Всероссийских конференций\">\n    <title>Панель администратора — Конференции.РФ</title>\n    <link rel=\"icon\" type=\"image/png\" href=\"/static/img/logo-32.png\">\n    <link rel=\"preload\" href=\"/static/fonts/PTSans-Regular.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n    <link rel=\"stylesheet\" href=\"/static/css/style.css\">\n</head>\n<body>\n<header class=\"header\">\n    <div class=\"container header__inner\">\n        <a class=\"logo\" href=\"/\">\n            <img src=\"/static/img/logo-64.png\" width=\"36\" height=\"36\" alt=\"\">\n            <span>Конференции<b>.РФ</b></span>\n        </a>\n        <button class=\"burger\" type=\"button\" aria-label=\"Меню\" aria-expanded=\"false\" data-burger><span></span></button>\n        <nav class=\"nav\" data-nav>\n            \n            <a href=\"/\" class=\"\">Помещения</a>\n            \n                \n                    <a href=\"/admin\" class=\"active\">Панель администратора</a>\n                \n                <span class=\"nav__user\">Conf2027</span>\n                <form action=\"/logout\" method=\"post\">\n                    <input type=\"hidden\" name=\"csrf_token\" value=\"TYaQNXsTx-GbDMeVoHBYZ-ynFhhCd9UghOLsd4mhfow\">\n                    <button class=\"link-btn\" type=\"submit\" data-testid=\"logout\">Выйти</button>\n                </form>\n            \n        </nav>\n    </div>\n</header>\n\n<main>\n    <div class=\"container page\" data-page>\n        \n<div class=\"page-head\">\n    <h1>Панель администратора</h1>\n    <span class=\"hint\">Все заявки зарегистрированных пользователей</span>\n</div>\n\n<div class=\"stats\" data-stats>\n    <div class=\"stat\"><b data-stat=\"1\">3</b><span>Новые</span></div>\n    <div class=\"stat\"><b data-stat=\"2\">6</b><span>Назначены</span></div>\n    <div class=\"stat\"><b data-stat=\"3\">3</b><span>Завершены</span></div>\n</div>\n\n<form class=\"filters\" id=\"filters\" novalidate>\n    <select name=\"status\" aria-label=\"Статус\">\n        <option value=\"\">Все статусы</option>\n        <option value=\"1\">Новая</option><option value=\"2\">Мероприятие назначено</option><option value=\"3\">Завершено</option>\n    </select>\n    <select name=\"room\" aria-label=\"Помещение\">\n        <option value=\"\">Все помещения</option>\n        <option value=\"1\">Аудитория</option><option value=\"2\">Коворкинг</option><option value=\"3\">Кинозал</option>\n    </select>\n    <input class=\"filters__search\" name=\"q\" type=\"search\" placeholder=\"Поиск по логину или ФИО\" aria-label=\"Поиск\">\n    <input name=\"from\" type=\"date\" aria-label=\"Начало с\">\n    <input name=\"to\" type=\"date\" aria-label=\"Начало по\">\n    <button class=\"btn btn--outline btn--sm\" type=\"reset\">Сбросить</button>\n</form>\n\n<div class=\"grid grid--3\" data-admin-list data-statuses='[{\"id\": 1, \"name\": \"\\u041d\\u043e\\u0432\\u0430\\u044f\"}, {\"id\": 2, \"name\": \"\\u041c\\u0435\\u0440\\u043e\\u043f\\u0440\\u0438\\u044f\\u0442\\u0438\\u0435 \\u043d\\u0430\\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u043e\"}, {\"id\": 3, \"name\": \"\\u0417\\u0430\\u0432\\u0435\\u0440\\u0448\\u0435\\u043d\\u043e\"}]'></div>\n<div class=\"card empty\" data-admin-empty hidden>Заявок по выбранным условиям нет.</div>\n\n    </div>\n</main>\n\n<footer class=\"footer\">\n    <div class=\"container footer__inner\">\n        <span>© 2027 Конференции.РФ — бронирование помещений для Всероссийских конференций</span>\n        <div class=\"social\">\n            <a href=\"#\" aria-label=\"ВКонтакте\"><img src=\"/static/img/social-vk.png\" width=\"32\" height=\"32\" alt=\"ВКонтакте\" loading=\"lazy\"></a>\n            <a href=\"#\" aria-label=\"Одноклассники\"><img src=\"/static/img/social-ok.png\" width=\"32\" height=\"32\" alt=\"Одноклассники\" loading=\"lazy\"></a>\n        </div>\n    </div>\n</footer>\n\n<div class=\"toasts\" data-toasts aria-live=\"polite\"></div>\n<script src=\"/static/js/common.js\" defer></script>\n<script src=\"/static/js/admin.js\" defer></script>\n</body>\n</html>"
+    }
+  ],
+  "/api/admin/requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/api/admin/requests?",
+      "status": 200,
+      "status_text": "OK",
+      "req_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "ru-RU",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "cookie": "conf_session=.eJxNjl0LgjAUhv9KnGuFqYPKy4rqog8Ci4xA1G1O0C02pSL6763tQm8e3vOcD84HslIrBjEkaX46XHXy8jfFak8vcrtIb_5brDlfkvm54sedJrjlTD7Bg-xBVZsLKjqIO9VTD1gtzZV7j3CA_oywZWk5syRDxoFlaOnm0WAi6vzEFmysRkNurXDZ_NTIqhbmh6UULETh1CglG2pMTlrT8aDXVGU1gTj4_gCgYUqu.atoFaQ.fYHnd-inUGGiTzsx6A75yxje8xI",
+        "host": "127.0.0.1:5000",
+        "referer": "http://127.0.0.1:5000/admin",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "x-csrf-token": "TYaQNXsTx-GbDMeVoHBYZ-ynFhhCd9UghOLsd4mhfow"
+      },
+      "res_headers": {
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "8572",
+        "content-security-policy": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; frame-ancestors 'none'; form-action 'self'",
+        "content-type": "application/json",
+        "date": "Thu, 22 Oct 2026 12:45:31 GMT",
+        "referrer-policy": "same-origin",
+        "server": "Werkzeug/3.1.9 Python/3.12.14",
+        "set-cookie": "conf_session=.eJxNjl0LgjAUhv9KnGuFqYPKy4rqog8Ci4xA1G1O0C02pSL6763tQm8e3vOcD84HslIrBjEkaX46XHXy8jfFak8vcrtIb_5brDlfkvm54sedJrjlTD7Bg-xBVZsLKjqIO9VTD1gtzZV7j3CA_oywZWk5syRDxoFlaOnm0WAi6vzEFmysRkNurXDZ_NTIqhbmh6UULETh1CglG2pMTlrT8aDXVGU1gTj4_gCgYUqu.atoFaw.pnIvZnItkS2JjC4Sn6cdnrXdd3w; Expires=Thu, 22 Oct 2026 14:45:31 GMT; HttpOnly; Path=/; SameSite=Lax",
+        "vary": "Cookie",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      },
+      "req_body": null,
+      "res_body": "{\"requests\":[{\"created_at\":\"2026-10-22 12:08:31\",\"email\":\"ivanov@mail.ru\",\"fio\":\"\\u0418\\u0432\\u0430\\u043d\\u043e\\u0432 \\u0418\\u0432\\u0430\\u043d \\u0418\\u0432\\u0430\\u043d\\u043e\\u0432\\u0438\\u0447\",\"id\":12,\"login\":\"ivanov01\",\"payment_method\":\"\\u041f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434 \\u043f\\u043e \\u0421\\u0411\\u041f\",\"payment_method_id\":2,\"phone\":\"8(912)345-67-89\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u041a\\u0438\\u043d\\u043e\\u0437\\u0430\\u043b\",\"room_id\":3,\"room_image\":\"img/room-cinema.webp\",\"start_at\":\"2026-11-05 10:00\",\"status\":\"\\u041c\\u0435\\u0440\\u043e\\u043f\\u0440\\u0438\\u044f\\u0442\\u0438\\u0435 \\u043d\\u0430\\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u043e\",\"status_id\":2,\"user_id\":2},{\"created_at\":\"2026-10-22 12:05:32\",\"email\":\"ivanov@mail.ru\",\"fio\":\"\\u0418\\u0432\\u0430\\u043d\\u043e\\u0432 \\u0418\\u0432\\u0430\\u043d \\u0418\\u0432\\u0430\\u043d\\u043e\\u0432\\u0438\\u0447\",\"id\":11,\"login\":\"ivanov01\",\"payment_method\":\"\\u041f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434 \\u043f\\u043e \\u0421\\u0411\\u041f\",\"payment_method_id\":2,\"phone\":\"8(912)345-67-89\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u041a\\u0438\\u043d\\u043e\\u0437\\u0430\\u043b\",\"room_id\":3,\"room_image\":\"img/room-cinema.webp\",\"start_at\":\"2026-11-05 10:00\",\"status\":\"\\u041c\\u0435\\u0440\\u043e\\u043f\\u0440\\u0438\\u044f\\u0442\\u0438\\u0435 \\u043d\\u0430\\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u043e\",\"status_id\":2,\"user_id\":2},{\"created_at\":\"2026-10-22 12:03:51\",\"email\":\"ivanov@mail.ru\",\"fio\":\"\\u0418\\u0432\\u0430\\u043d\\u043e\\u0432 \\u0418\\u0432\\u0430\\u043d \\u0418\\u0432\\u0430\\u043d\\u043e\\u0432\\u0438\\u0447\",\"id\":10,\"login\":\"ivanov01\",\"payment_method\":\"\\u041f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434 \\u043f\\u043e \\u0421\\u0411\\u041f\",\"payment_method_id\":2,\"phone\":\"8(912)345-67-89\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u041a\\u0438\\u043d\\u043e\\u0437\\u0430\\u043b\",\"room_id\":3,\"room_image\":\"img/room-cinema.webp\",\"start_at\":\"2026-11-05 10:00\",\"status\":\"\\u041c\\u0435\\u0440\\u043e\\u043f\\u0440\\u0438\\u044f\\u0442\\u0438\\u0435 \\u043d\\u0430\\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u043e\",\"status_id\":2,\"user_id\":2},{\"created_at\":\"2026-10-19 05:00:00\",\"email\":\"ivanov@mail.ru\",\"fio\":\"\\u0418\\u0432\\u0430\\u043d\\u043e\\u0432 \\u0418\\u0432\\u0430\\u043d \\u0418\\u0432\\u0430\\u043d\\u043e\\u0432\\u0438\\u0447\",\"id\":2,\"login\":\"ivanov01\",\"payment_method\":\"\\u041f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434 \\u043f\\u043e \\u0421\\u0411\\u041f\",\"payment_method_id\":2,\"phone\":\"8(912)345-67-89\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u041a\\u043e\\u0432\\u043e\\u0440\\u043a\\u0438\\u043d\\u0433\",\"room_id\":2,\"room_image\":\"img/room-coworking.webp\",\"start_at\":\"2026-11-11 10:00\",\"status\":\"\\u041c\\u0435\\u0440\\u043e\\u043f\\u0440\\u0438\\u044f\\u0442\\u0438\\u0435 \\u043d\\u0430\\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u043e\",\"status_id\":2,\"user_id\":2},{\"created_at\":\"2026-10-19 04:00:00\",\"email\":\"petrova@yandex.ru\",\"fio\":\"\\u041f\\u0435\\u0442\\u0440\\u043e\\u0432\\u0430 \\u0410\\u043d\\u043d\\u0430 \\u0421\\u0435\\u0440\\u0433\\u0435\\u0435\\u0432\\u043d\\u0430\",\"id\":5,\"login\":\"petrova22\",\"payment_method\":\"\\u041f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434 \\u043f\\u043e \\u0421\\u0411\\u041f\",\"payment_method_id\":2,\"phone\":\"8(903)111-22-33\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u041a\\u0438\\u043d\\u043e\\u0437\\u0430\\u043b\",\"room_id\":3,\"room_image\":\"img/room-cinema.webp\",\"start_at\":\"2026-11-12 11:00\",\"status\":\"\\u041c\\u0435\\u0440\\u043e\\u043f\\u0440\\u0438\\u044f\\u0442\\u0438\\u0435 \\u043d\\u0430\\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u043e\",\"status_id\":2,\"user_id\":3},{\"created_at\":\"2026-10-19 03:00:00\",\"email\":\"sidorov@gmail.com\",\"fio\":\"\\u0421\\u0438\\u0434\\u043e\\u0440\\u043e\\u0432 \\u041f\\u0451\\u0442\\u0440 \\u041e\\u043b\\u0435\\u0433\\u043e\\u0432\\u0438\\u0447\",\"id\":8,\"login\":\"sidorov77\",\"payment_method\":\"\\u041f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434 \\u043f\\u043e \\u0421\\u0411\\u041f\",\"payment_method_id\":2,\"phone\":\"8(925)555-44-11\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u0410\\u0443\\u0434\\u0438\\u0442\\u043e\\u0440\\u0438\\u044f\",\"room_id\":1,\"room_image\":\"img/room-auditorium.webp\",\"start_at\":\"2026-11-13 12:00\",\"status\":\"\\u041c\\u0435\\u0440\\u043e\\u043f\\u0440\\u0438\\u044f\\u0442\\u0438\\u0435 \\u043d\\u0430\\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u043e\",\"status_id\":2,\"user_id\":4},{\"created_at\":\"2026-10-18 05:00:00\",\"email\":\"ivanov@mail.ru\",\"fio\":\"\\u0418\\u0432\\u0430\\u043d\\u043e\\u0432 \\u0418\\u0432\\u0430\\u043d \\u0418\\u0432\\u0430\\u043d\\u043e\\u0432\\u0438\\u0447\",\"id\":1,\"login\":\"ivanov01\",\"payment_method\":\"\\u041f\\u0440\\u0438 \\u043e\\u0447\\u043d\\u043e\\u043c \\u043f\\u043e\\u0441\\u0435\\u0449\\u0435\\u043d\\u0438\\u0438\",\"payment_method_id\":1,\"phone\":\"8(912)345-67-89\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u0410\\u0443\\u0434\\u0438\\u0442\\u043e\\u0440\\u0438\\u044f\",\"room_id\":1,\"room_image\":\"img/room-auditorium.webp\",\"start_at\":\"2026-11-01 10:00\",\"status\":\"\\u041d\\u043e\\u0432\\u0430\\u044f\",\"status_id\":1,\"user_id\":2},{\"created_at\":\"2026-10-18 04:00:00\",\"email\":\"petrova@yandex.ru\",\"fio\":\"\\u041f\\u0435\\u0442\\u0440\\u043e\\u0432\\u0430 \\u0410\\u043d\\u043d\\u0430 \\u0421\\u0435\\u0440\\u0433\\u0435\\u0435\\u0432\\u043d\\u0430\",\"id\":4,\"login\":\"petrova22\",\"payment_method\":\"\\u041f\\u0440\\u0438 \\u043e\\u0447\\u043d\\u043e\\u043c \\u043f\\u043e\\u0441\\u0435\\u0449\\u0435\\u043d\\u0438\\u0438\",\"payment_method_id\":1,\"phone\":\"8(903)111-22-33\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u041a\\u043e\\u0432\\u043e\\u0440\\u043a\\u0438\\u043d\\u0433\",\"room_id\":2,\"room_image\":\"img/room-coworking.webp\",\"start_at\":\"2026-11-02 11:00\",\"status\":\"\\u041d\\u043e\\u0432\\u0430\\u044f\",\"status_id\":1,\"user_id\":3},{\"created_at\":\"2026-10-18 03:00:00\",\"email\":\"sidorov@gmail.com\",\"fio\":\"\\u0421\\u0438\\u0434\\u043e\\u0440\\u043e\\u0432 \\u041f\\u0451\\u0442\\u0440 \\u041e\\u043b\\u0435\\u0433\\u043e\\u0432\\u0438\\u0447\",\"id\":7,\"login\":\"sidorov77\",\"payment_method\":\"\\u041f\\u0440\\u0438 \\u043e\\u0447\\u043d\\u043e\\u043c \\u043f\\u043e\\u0441\\u0435\\u0449\\u0435\\u043d\\u0438\\u0438\",\"payment_method_id\":1,\"phone\":\"8(925)555-44-11\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u041a\\u0438\\u043d\\u043e\\u0437\\u0430\\u043b\",\"room_id\":3,\"room_image\":\"img/room-cinema.webp\",\"start_at\":\"2026-11-03 12:00\",\"status\":\"\\u041d\\u043e\\u0432\\u0430\\u044f\",\"status_id\":1,\"user_id\":4},{\"created_at\":\"2026-10-01 10:00:00\",\"email\":\"ivanov@mail.ru\",\"fio\":\"\\u0418\\u0432\\u0430\\u043d\\u043e\\u0432 \\u0418\\u0432\\u0430\\u043d \\u0418\\u0432\\u0430\\u043d\\u043e\\u0432\\u0438\\u0447\",\"id\":3,\"login\":\"ivanov01\",\"payment_method\":\"\\u041f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434 \\u043f\\u043e \\u0421\\u0411\\u041f\",\"payment_method_id\":2,\"phone\":\"8(912)345-67-89\",\"review_id\":1,\"review_rating\":5,\"review_text\":\"\\u041e\\u0442\\u043b\\u0438\\u0447\\u043d\\u044b\\u0439 \\u0437\\u0430\\u043b, \\u0432\\u0441\\u0451 \\u043e\\u0431\\u043e\\u0440\\u0443\\u0434\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435 \\u0440\\u0430\\u0431\\u043e\\u0442\\u0430\\u043b\\u043e, \\u043e\\u0440\\u0433\\u0430\\u043d\\u0438\\u0437\\u0430\\u0442\\u043e\\u0440\\u044b \\u043f\\u043e\\u043c\\u043e\\u0433\\u043b\\u0438 \\u0441 \\u0440\\u0435\\u0433\\u0438\\u0441\\u0442\\u0440\\u0430\\u0446\\u0438\\u0435\\u0439.\",\"room\":\"\\u041a\\u0438\\u043d\\u043e\\u0437\\u0430\\u043b\",\"room_id\":3,\"room_image\":\"img/room-cinema.webp\",\"start_at\":\"2026-10-15 10:00\",\"status\":\"\\u0417\\u0430\\u0432\\u0435\\u0440\\u0448\\u0435\\u043d\\u043e\",\"status_id\":3,\"user_id\":2},{\"created_at\":\"2026-09-30 11:00:00\",\"email\":\"petrova@yandex.ru\",\"fio\":\"\\u041f\\u0435\\u0442\\u0440\\u043e\\u0432\\u0430 \\u0410\\u043d\\u043d\\u0430 \\u0421\\u0435\\u0440\\u0433\\u0435\\u0435\\u0432\\u043d\\u0430\",\"id\":6,\"login\":\"petrova22\",\"payment_method\":\"\\u041f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434 \\u043f\\u043e \\u0421\\u0411\\u041f\",\"payment_method_id\":2,\"phone\":\"8(903)111-22-33\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u0410\\u0443\\u0434\\u0438\\u0442\\u043e\\u0440\\u0438\\u044f\",\"room_id\":1,\"room_image\":\"img/room-auditorium.webp\",\"start_at\":\"2026-10-14 11:00\",\"status\":\"\\u0417\\u0430\\u0432\\u0435\\u0440\\u0448\\u0435\\u043d\\u043e\",\"status_id\":3,\"user_id\":3},{\"created_at\":\"2026-09-29 12:00:00\",\"email\":\"sidorov@gmail.com\",\"fio\":\"\\u0421\\u0438\\u0434\\u043e\\u0440\\u043e\\u0432 \\u041f\\u0451\\u0442\\u0440 \\u041e\\u043b\\u0435\\u0433\\u043e\\u0432\\u0438\\u0447\",\"id\":9,\"login\":\"sidorov77\",\"payment_method\":\"\\u041f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434 \\u043f\\u043e \\u0421\\u0411\\u041f\",\"payment_method_id\":2,\"phone\":\"8(925)555-44-11\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u041a\\u043e\\u0432\\u043e\\u0440\\u043a\\u0438\\u043d\\u0433\",\"room_id\":2,\"room_image\":\"img/room-coworking.webp\",\"start_at\":\"2026-10-13 12:00\",\"status\":\"\\u0417\\u0430\\u0432\\u0435\\u0440\\u0448\\u0435\\u043d\\u043e\",\"status_id\":3,\"user_id\":4}],\"stats\":{\"1\":3,\"2\":6,\"3\":3}}\n"
+    }
+  ],
+  "/api/admin/requests?status=1": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/api/admin/requests?status=1",
+      "status": 200,
+      "status_text": "OK",
+      "req_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "ru-RU",
+        "connection": "keep-alive",
+        "cookie": "conf_session=.eJxNjl0LgjAUhv9KnGuFqYPKy4rqog8Ci4xA1G1O0C02pSL6763tQm8e3vOcD84HslIrBjEkaX46XHXy8jfFak8vcrtIb_5brDlfkvm54sedJrjlTD7Bg-xBVZsLKjqIO9VTD1gtzZV7j3CA_oywZWk5syRDxoFlaOnm0WAi6vzEFmysRkNurXDZ_NTIqhbmh6UULETh1CglG2pMTlrT8aDXVGU1gTj4_gCgYUqu.atoFaw.pnIvZnItkS2JjC4Sn6cdnrXdd3w",
+        "host": "127.0.0.1:5000",
+        "referer": "http://127.0.0.1:5000/admin",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin"
+      },
+      "res_headers": {
+        "cache-control": "no-store",
+        "connection": "close",
+        "content-length": "2002",
+        "content-security-policy": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; frame-ancestors 'none'; form-action 'self'",
+        "content-type": "application/json",
+        "date": "Thu, 22 Oct 2026 12:45:33 GMT",
+        "referrer-policy": "same-origin",
+        "server": "Werkzeug/3.1.9 Python/3.12.14",
+        "set-cookie": "conf_session=.eJxNjl0LgjAUhv9KnGuFqYPKy4rqog8Ci4xA1G1O0C02pSL6763tQm8e3vOcD84HslIrBjEkaX46XHXy8jfFak8vcrtIb_5brDlfkvm54sedJrjlTD7Bg-xBVZsLKjqIO9VTD1gtzZV7j3CA_oywZWk5syRDxoFlaOnm0WAi6vzEFmysRkNurXDZ_NTIqhbmh6UULETh1CglG2pMTlrT8aDXVGU1gTj4_gCgYUqu.atoFbQ.b53i3-ZJ6aOIDADNMt2GIktwvVc; Expires=Thu, 22 Oct 2026 14:45:33 GMT; HttpOnly; Path=/; SameSite=Lax",
+        "vary": "Cookie",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      },
+      "req_body": null,
+      "res_body": "{\"requests\":[{\"created_at\":\"2026-10-18 05:00:00\",\"email\":\"ivanov@mail.ru\",\"fio\":\"\\u0418\\u0432\\u0430\\u043d\\u043e\\u0432 \\u0418\\u0432\\u0430\\u043d \\u0418\\u0432\\u0430\\u043d\\u043e\\u0432\\u0438\\u0447\",\"id\":1,\"login\":\"ivanov01\",\"payment_method\":\"\\u041f\\u0440\\u0438 \\u043e\\u0447\\u043d\\u043e\\u043c \\u043f\\u043e\\u0441\\u0435\\u0449\\u0435\\u043d\\u0438\\u0438\",\"payment_method_id\":1,\"phone\":\"8(912)345-67-89\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u0410\\u0443\\u0434\\u0438\\u0442\\u043e\\u0440\\u0438\\u044f\",\"room_id\":1,\"room_image\":\"img/room-auditorium.webp\",\"start_at\":\"2026-11-01 10:00\",\"status\":\"\\u041d\\u043e\\u0432\\u0430\\u044f\",\"status_id\":1,\"user_id\":2},{\"created_at\":\"2026-10-18 04:00:00\",\"email\":\"petrova@yandex.ru\",\"fio\":\"\\u041f\\u0435\\u0442\\u0440\\u043e\\u0432\\u0430 \\u0410\\u043d\\u043d\\u0430 \\u0421\\u0435\\u0440\\u0433\\u0435\\u0435\\u0432\\u043d\\u0430\",\"id\":4,\"login\":\"petrova22\",\"payment_method\":\"\\u041f\\u0440\\u0438 \\u043e\\u0447\\u043d\\u043e\\u043c \\u043f\\u043e\\u0441\\u0435\\u0449\\u0435\\u043d\\u0438\\u0438\",\"payment_method_id\":1,\"phone\":\"8(903)111-22-33\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u041a\\u043e\\u0432\\u043e\\u0440\\u043a\\u0438\\u043d\\u0433\",\"room_id\":2,\"room_image\":\"img/room-coworking.webp\",\"start_at\":\"2026-11-02 11:00\",\"status\":\"\\u041d\\u043e\\u0432\\u0430\\u044f\",\"status_id\":1,\"user_id\":3},{\"created_at\":\"2026-10-18 03:00:00\",\"email\":\"sidorov@gmail.com\",\"fio\":\"\\u0421\\u0438\\u0434\\u043e\\u0440\\u043e\\u0432 \\u041f\\u0451\\u0442\\u0440 \\u041e\\u043b\\u0435\\u0433\\u043e\\u0432\\u0438\\u0447\",\"id\":7,\"login\":\"sidorov77\",\"payment_method\":\"\\u041f\\u0440\\u0438 \\u043e\\u0447\\u043d\\u043e\\u043c \\u043f\\u043e\\u0441\\u0435\\u0449\\u0435\\u043d\\u0438\\u0438\",\"payment_method_id\":1,\"phone\":\"8(925)555-44-11\",\"review_id\":null,\"review_rating\":null,\"review_text\":null,\"room\":\"\\u041a\\u0438\\u043d\\u043e\\u0437\\u0430\\u043b\",\"room_id\":3,\"room_image\":\"img/room-cinema.webp\",\"start_at\":\"2026-11-03 12:00\",\"status\":\"\\u041d\\u043e\\u0432\\u0430\\u044f\",\"status_id\":1,\"user_id\":4}],\"stats\":{\"1\":3,\"2\":6,\"3\":3}}\n"
+    }
+  ]
+}
