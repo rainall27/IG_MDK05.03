@@ -1,0 +1,52 @@
+name: Selenium
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  selenium:
+    runs-on: ubuntu-latest
+    env:
+      APP_DIR: ${{ github.workspace }}/app/ПР11_Веб-приложение_по_ТЗ/code
+    steps:
+      - name: Тесты (этот репозиторий)
+        uses: actions/checkout@v4
+
+      - name: Приложение «Конференции.РФ» (репозиторий IG_MDK09.01)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/IG_MDK09.01
+          path: app
+          token: ${{ secrets.APP_REPO_TOKEN || github.token }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Зависимости
+        run: |
+          pip install -r "$APP_DIR/requirements.txt"
+          pip install -r "Задание_05_Смоук-тесты_Selenium_и_CI/code/requirements.txt"
+
+      - name: Задание 4 - автотест формы входа
+        working-directory: Задание_04_Автотест_Selenium_форма_входа/code
+        run: python -m pytest -v --html=report.html --self-contained-html
+
+      - name: Задание 5 - смоук-тесты
+        if: ${{ !cancelled() }}
+        working-directory: Задание_05_Смоук-тесты_Selenium_и_CI/code
+        run: python -m pytest -v -m smoke --html=report.html --self-contained-html
+
+      - name: Отчёты и снимки экрана
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-reports
+          path: |
+            Задание_04_Автотест_Selenium_форма_входа/code/report.html
+            Задание_04_Автотест_Selenium_форма_входа/code/artifacts/
+            Задание_05_Смоук-тесты_Selenium_и_CI/code/report.html
+            Задание_05_Смоук-тесты_Selenium_и_CI/code/artifacts/
+          if-no-files-found: ignore

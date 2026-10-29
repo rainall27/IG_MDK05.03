@@ -1,0 +1,7 @@
+collecting ... collected 5 items
+tests/test_smoke.py::test_smoke_1_home_page_shows_three_rooms PASSED     [ 20%]
+tests/test_smoke.py::test_smoke_2_new_user_can_register_and_login PASSED [ 40%]
+tests/test_smoke.py::test_smoke_3_participant_sees_own_requests PASSED   [ 60%]
+tests/test_smoke.py::test_smoke_4_participant_creates_request PASSED     [ 80%]
+tests/test_smoke.py::test_smoke_5_admin_sees_all_requests PASSED         [100%]
+============================== 5 passed in 19.16s ==============================
