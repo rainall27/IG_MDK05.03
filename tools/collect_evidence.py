@@ -138,8 +138,8 @@ def collect(app, out):
                 assert wrong['status'] == 401 and good['status'] == 200
                 driver.execute_async_script("fetch('/api/admin/requests?status=1').then(r => r.text()).then(arguments[0])")
                 har = make_har(driver)
-                dump(out / TEST / TASK2 / 'data/current_http.har', har)
-                dump(out / TEST / TASK2 / 'data/current_captured_requests.json', har['log']['entries'])
+                dump(out / TEST / TASK2 / 'data/conference_login.har', har)
+                dump(out / TEST / TASK2 / 'data/captured_requests.json', har['log']['entries'])
                 driver.delete_all_cookies()
                 driver.get(base + '/register')
                 registration = post(driver, '/api/register', {
@@ -188,7 +188,6 @@ def collect(app, out):
             module.check(base, out / WEB / BROWSERS)
             # Результат размещается рядом с кодом проверки в репозитории.
             checks = out / WEB / BROWSERS / 'browser_checks.json'
-            checks.rename(out / WEB / BROWSERS / 'code/browser_checks.json') if (out / WEB / BROWSERS / 'code').exists() else None
             if checks.exists():
                 (checks.parent / 'code').mkdir(exist_ok=True)
                 checks.rename(checks.parent / 'code/browser_checks.json')

@@ -13,4 +13,4 @@
 
 Запуск описан в разделе 6 отчёта.
 
-![](img/01_wrong_password_alert.png)
+[Снимок ](img/01_wrong_password_alert.png)

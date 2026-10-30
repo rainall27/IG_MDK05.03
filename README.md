@@ -16,3 +16,7 @@
 В каждой папке задания: отчёт в Word (`.docx`) и Markdown, `README.md` со списком файлов, `img/` с принтскринами (для задания 2 ещё `data/` с HAR и JSON).
 
 Автотесты (задания 4 и 5) запускаются автоматически в GitHub Actions: [`.github/workflows/selenium.yml`](.github/workflows/selenium.yml). Для заданий 4 и 5 рядом должен лежать репозиторий `IG_MDK09.01` с приложением.
+
+## Источник заданий
+
+[Задания преподавателя](https://github.com/softboxdev/test_methodologies/blob/main/program_practice.md). Отчёты содержат задания 1–5, включая автоматизацию.

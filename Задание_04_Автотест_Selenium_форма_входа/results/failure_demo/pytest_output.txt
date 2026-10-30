@@ -1,0 +1,34 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-9.2.0, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.12.15/x64/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.15', 'Platform': 'Linux-7.0.0-1017-azure-x86_64-with-glibc2.43', 'Packages': {'pytest': '9.2.0', 'pluggy': '1.7.0'}, 'Plugins': {'metadata': '3.1.1', 'html': '4.2.0'}, 'CI': 'true'}
+rootdir: /tmp/failure-capture-np1mnvcg/code
+configfile: pytest.ini
+testpaths: tests
+plugins: metadata-3.1.1, html-4.2.0
+collecting ... collected 16 items / 15 deselected / 1 selected
+
+tests/test_login_form.py::test_wrong_password_shows_alert_and_clears_password FAILED [100%]
+
+=================================== FAILURES ===================================
+_____________ test_wrong_password_shows_alert_and_clears_password ______________
+
+login_page = <pages.login_page.LoginPage object at 0x779659efacf0>
+
+    def test_wrong_password_shows_alert_and_clears_password(login_page):
+        login_page.login('ivanov01', 'wrongpass1')
+    
+>       assert login_page.alert_text() == WRONG
+E       AssertionError: assert 'Неверный логин или пароль' == 'Заведомо нев...идаемый текст'
+E         
+E         - Заведомо неверный ожидаемый текст
+E         + Неверный логин или пароль
+
+tests/test_login_form.py:93: AssertionError
+- Generated html report: file:///home/runner/work/IG_MDK05.03/IG_MDK05.03/failure-evidence/pytest_report.html -
+=========================== short test summary info ============================
+FAILED tests/test_login_form.py::test_wrong_password_shows_alert_and_clears_password - AssertionError: assert 'Неверный логин или пароль' == 'Заведомо нев...идаемый текст'
+  
+  - Заведомо неверный ожидаемый текст
+  + Неверный логин или пароль
+======================= 1 failed, 15 deselected in 2.59s =======================

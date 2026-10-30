@@ -1,5 +1,6 @@
 # Задание № 4. Автотест формы авторизации на Selenium
 
+Публичная копия: пароли и контактные значения скрыты. Для повторения используются тестовые данные из `seed_demo.py`. Снимки доступны по ссылкам на файлы репозитория.
 **Студент:** Сунатуллин Раиль Ринатович, группа 4ИСП9-45
 
 **Цель:** написать автоматический тест формы авторизации с явными ожиданиями и шаблоном Page Object Model.
@@ -12,7 +13,7 @@
 | Язык | Python 3 |
 | Автоматизация браузера | Selenium WebDriver 4 |
 | Запуск тестов и отчёт | pytest, pytest-html |
-| Браузер | Chrome (в проверке: Chromium 141, headless) |
+| Браузер | Chrome, headless; точная версия — в материалах соответствующего запуска |
 | Объект тестирования | портал «Конференции.РФ» (Flask), репозиторий `IG_MDK09.01`, папка `ПР11_Веб-приложение_по_ТЗ/code` |
 
 ## 2. Структура проекта
@@ -31,7 +32,7 @@ code/
 ```
 
 ## 3. Page Object Model
-Идея шаблона: всё, что связано с устройством страницы (селекторы, порядок кликов), прячется в классе страницы. В тесте остаются только действия пользователя и проверки. Если разработчик поменяет вёрстку, правится один класс, а не все тесты.
+Селекторы и действия над элементами вынесены в классы страниц. Сценарии обращаются к их методам; при изменении вёрстки локаторы исправляются в Page Object.
 
 | Класс | За что отвечает | Основные методы |
 |---|---|---|
@@ -43,7 +44,7 @@ code/
 Пример теста. Сценарий читается как инструкция, без селекторов:
 ```python
 def test_wrong_password_shows_alert_and_clears_password(login_page):
-    login_page.login('ivanov01', 'wrongpass1')
+    login_page.login('ivanov01', '[пароль скрыт]')
     assert login_page.alert_text() == 'Неверный логин или пароль'
     assert login_page.current_path == '/login'
     assert login_page.password_value() == ''
@@ -57,12 +58,12 @@ def test_wrong_password_shows_alert_and_clears_password(login_page):
 | поле или кнопка должны быть видны | `visibility_of_element_located` |
 | перед кликом | `element_to_be_clickable` |
 | после отправки формы переход на другую страницу | `url_contains`, `url_to_be` |
-| сообщение об ошибке приходит после ответа сервера | ожидание непустого текста элемента (`wait_text`) |
+| сообщение об ошибке приходит после ответа сервера | `LoginPage.submit()` ждёт видимое сообщение и очистку пароля; для ошибок полей — непустой текст ошибки |
 
 Единственная пауза в коде - в `conftest.py` при запуске сервера приложения: цикл опрашивает адрес, пока сервер не ответит. Это ожидание процесса, а не элемента страницы.
 
 ## 5. Тесты
-Тесты берут данные из `seed_demo.py`: участник `ivanov01 / Password1`, администратор `Conf2027 / Demo77`.
+Тесты берут данные из `seed_demo.py`: участник `ivanov01 / [пароль скрыт]`, администратор `Conf2027 / [пароль скрыт]`.
 
 | № | Тест | Что проверяет |
 |---|---|---|
@@ -78,7 +79,7 @@ def test_wrong_password_shows_alert_and_clears_password(login_page):
 | 10 | `test_wrong_password_shows_alert_and_clears_password` | «Неверный логин или пароль», остаёмся на `/login`, поле пароля очищено |
 | 11 | `test_unknown_login_gives_same_message` | несуществующий логин даёт то же сообщение (не выдаём, есть ли такой пользователь) |
 | 12 | `test_sql_injection_in_login_is_rejected` | `' OR '1'='1` не пускает |
-| 13 | `test_password_is_case_sensitive` | `password1` вместо `Password1` отклоняется |
+| 13 | `test_password_is_case_sensitive` | `[пароль скрыт]` вместо `[пароль скрыт]` отклоняется |
 | 14 | `test_account_locks_after_five_wrong_attempts` | после 5 неверных попыток даже верный пароль не принимается: «Слишком много попыток» |
 | 15 | `test_show_password_button_toggles_field_type` | кнопка «Показать пароль» переключает `password` / `text` |
 | 16 | `test_link_to_registration` | ссылка «Регистрация» ведёт на `/register` |
@@ -95,10 +96,10 @@ pip install -r C:\IG\IG_MDK09.01\ПР11_Веб-приложение_по_ТЗ\co
 set APP_DIR=C:\IG\IG_MDK09.01\ПР11_Веб-приложение_по_ТЗ\code
 python -m pytest -v --html=report.html --self-contained-html
 ```
-Что делает каждая строка:
+Для запуска:
 
 - `cd` - переход в папку с тестами;
-- `python -m venv venv` и `venv\Scripts\activate` - создают и включают отдельное окружение Python;
+- `python -m venv venv` и `venv\Scripts\activate` - создают и включают виртуальное окружение Python;
 - первый `pip install` ставит Selenium, pytest и pytest-html, второй - Flask, на котором работает приложение;
 - `set APP_DIR=...` - указывает, где лежит приложение «Конференции.РФ» (если репозитории `IG_MDK05.03` и `IG_MDK09.01` лежат рядом, эту строку можно пропустить);
 - `python -m pytest ...` - запускает тесты и сохраняет отчёт `report.html`.
@@ -106,10 +107,13 @@ python -m pytest -v --html=report.html --self-contained-html
 Нужен установленный Google Chrome. Драйвер Selenium подбирает сам. Приложение тест запускает и останавливает самостоятельно, на временной базе данных.
 
 ## 7. Результат прогона
-Прогон в headless-Chromium 141 на Linux:
+GitHub Actions, 30.10.2026: **16 из 16 тестов прошли**. [Страница запуска](https://github.com/rainall27/IG_MDK05.03/actions/runs/41071186020).
 
-```
-collecting ... collected 16 items
+- Исходники тестов: `eb753f3a3dcf1ad49d1f19fe9a77488903a19ee3`.
+- Исходники приложения: `ace5c31b61d5d6c937f111fba525e5fff628a78b`.
+- Окружение: Ubuntu, Python 3.12.15; версии pytest и зависимостей сохранены в начале вывода.
+
+```text
 tests/test_login_form.py::test_login_page_has_form_elements PASSED       [  6%]
 tests/test_login_form.py::test_participant_login_opens_my_requests PASSED [ 12%]
 tests/test_login_form.py::test_admin_login_opens_admin_panel PASSED      [ 18%]
@@ -126,28 +130,28 @@ tests/test_login_form.py::test_password_is_case_sensitive PASSED         [ 81%]
 tests/test_login_form.py::test_account_locks_after_five_wrong_attempts PASSED [ 87%]
 tests/test_login_form.py::test_show_password_button_toggles_field_type PASSED [ 93%]
 tests/test_login_form.py::test_link_to_registration PASSED               [100%]
-============================= 16 passed in 35.85s ==============================
+============================= 16 passed in 31.09s ==============================
 ```
 
-Все 16 тестов пройдены. Полный отчёт: [`results/pytest_report.html`](results/pytest_report.html).
+[Полный HTML-отчёт](results/pytest_report.html) и [исходный вывод pytest](results/pytest_output.txt) относятся к этому запуску. Предыдущий локальный прогон заменён материалами CI. Обновлённые снимки получены в указанном запуске. Снимки панели администратора оставлены от исходной проверки и отдельно не перезагружались.
 
 ### Принтскрины
 Снимки сделаны автоматически в конце теста.
 
 | Неверный пароль | Пустая форма |
 |---|---|
-| ![](img/01_wrong_password_alert.png) | ![](img/02_empty_form_errors.png) |
+| [Снимок ](img/01_wrong_password_alert.png) | [Снимок ](img/02_empty_form_errors.png) |
 
 | Блокировка после 5 попыток | Вход участника |
 |---|---|
-| ![](img/03_account_locked.png) | ![](img/04_participant_dashboard.png) |
+| [Снимок ](img/03_account_locked.png) | [Снимок ](img/04_participant_dashboard.png) |
 
-![Вход администратора](img/05_admin_panel.png)
+[Снимок Вход администратора](img/05_admin_panel.png)
 
 ## 8. Проверка, что тест умеет находить ошибки
-Тест, который всегда зелёный, бесполезен. Поэтому в копии теста был намеренно изменён ожидаемый текст («Неверный логин или пароль» на другой). Два теста с этим сообщением упали, а conftest сохранил снимок экрана каждого падения (`artifacts/FAIL_*.png`) и вложил его в HTML-отчёт.
+Скрипт [`tools/check_failure_capture.py`](../tools/check_failure_capture.py) копирует тесты во временную папку и изменяет ожидаемое сообщение только в копии. Затем запускается один сценарий неверного пароля. Ожидаемый результат контрольного запуска — одно падение, снимок `FAIL_*.png` и HTML-отчёт. Рабочий набор тестов не изменяется. Результаты контрольного запуска: [вывод pytest](results/failure_demo/pytest_output.txt), [HTML-отчёт](results/failure_demo/pytest_report.html) и [снимок](results/failure_demo/FAIL_test_wrong_password_shows_alert_and_clears_password.png). Получено **1 ожидаемое падение**, снимок сохранён; [запуск проверки](https://github.com/rainall27/IG_MDK05.03/actions/runs/41071186105).
 
 ## 9. Выводы
 1. Форма входа работает по ТЗ: участник и администратор попадают на свои страницы, ошибки показываются у полей и над формой.
 2. Защитные механизмы подтверждены на уровне интерфейса: SQL-инъекция не проходит, сообщение об ошибке одинаково для неверного логина и неверного пароля, после 5 попыток вход блокируется.
-3. Шаблон Page Object отделил селекторы от сценариев: добавить новый тест формы - это 3-5 строк.
+3. Page Object отделяет локаторы и ожидания от проверок; `LoginPage.submit()` дожидается перехода, ошибки поля либо ответа сервера с очищенным паролем.

@@ -1,0 +1,7 @@
+SQLite query result
+Captured UTC: 2026-10-30T14:22:46.890433+00:00
+
+SELECT id, login, fio FROM user WHERE lower(login) = 'ivanov01';
+
+2 | ivanov01 | Иванов Иван Иванович
+5 | IVANOV01 | Двойник Иван

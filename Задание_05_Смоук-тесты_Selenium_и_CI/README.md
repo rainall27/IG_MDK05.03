@@ -14,4 +14,4 @@
 
 Запуск описан в разделе 6 отчёта.
 
-![](img/04_smoke_create_request.png)
+[Снимок ](img/04_smoke_create_request.png)
