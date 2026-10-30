@@ -47,7 +47,23 @@ class LoginPage(BasePage):
         return self
 
     def submit(self):
+        previous_url = self.driver.current_url
         self.click(self.SUBMIT)
+        self.wait.until(EC.any_of(
+            EC.url_changes(previous_url),
+            lambda driver: driver.execute_script("""
+                const form = document.getElementById('login-form');
+                if (!form) return false;
+                const alert = form.querySelector('[data-form-alert]');
+                const serverError = alert && !alert.hidden &&
+                    alert.textContent.trim() &&
+                    form.elements.password.value === '';
+                const fieldError = Array.from(
+                    form.querySelectorAll('[data-error-for]')
+                ).some(element => element.textContent.trim());
+                return Boolean(serverError || fieldError);
+            """),
+        ))
         return self
 
     def login(self, login, password):
