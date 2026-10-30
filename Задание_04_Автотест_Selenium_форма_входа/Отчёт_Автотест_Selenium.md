@@ -1,6 +1,6 @@
 # Задание № 4. Автотест формы авторизации на Selenium
 
-Публичная копия: пароли и контактные значения скрыты. Для повторения используются тестовые данные из `seed_demo.py`. Снимки доступны по ссылкам на файлы репозитория.
+Демонстрационные учётные записи учебного стенда: администратор **Conf2027 / Demo77**, участник **ivanov01 / Password1**. Эти значения заданы в `seed_demo.py` и конфигурации учебного приложения; они не относятся к внешним сервисам. Cookie, CSRF-токены и контактные значения в публичных данных скрыты.
 **Студент:** Сунатуллин Раиль Ринатович, группа 4ИСП9-45
 
 **Цель:** написать автоматический тест формы авторизации с явными ожиданиями и шаблоном Page Object Model.
@@ -44,7 +44,7 @@ code/
 Пример теста. Сценарий читается как инструкция, без селекторов:
 ```python
 def test_wrong_password_shows_alert_and_clears_password(login_page):
-    login_page.login('ivanov01', '[пароль скрыт]')
+    login_page.login('ivanov01', 'wrongpass1')
     assert login_page.alert_text() == 'Неверный логин или пароль'
     assert login_page.current_path == '/login'
     assert login_page.password_value() == ''
@@ -63,7 +63,7 @@ def test_wrong_password_shows_alert_and_clears_password(login_page):
 Единственная пауза в коде - в `conftest.py` при запуске сервера приложения: цикл опрашивает адрес, пока сервер не ответит. Это ожидание процесса, а не элемента страницы.
 
 ## 5. Тесты
-Тесты берут данные из `seed_demo.py`: участник `ivanov01 / [пароль скрыт]`, администратор `Conf2027 / [пароль скрыт]`.
+Тесты берут данные из `seed_demo.py`: участник `ivanov01 / Password1`, администратор `Conf2027 / Demo77`.
 
 | № | Тест | Что проверяет |
 |---|---|---|
@@ -79,7 +79,7 @@ def test_wrong_password_shows_alert_and_clears_password(login_page):
 | 10 | `test_wrong_password_shows_alert_and_clears_password` | «Неверный логин или пароль», остаёмся на `/login`, поле пароля очищено |
 | 11 | `test_unknown_login_gives_same_message` | несуществующий логин даёт то же сообщение (не выдаём, есть ли такой пользователь) |
 | 12 | `test_sql_injection_in_login_is_rejected` | `' OR '1'='1` не пускает |
-| 13 | `test_password_is_case_sensitive` | `[пароль скрыт]` вместо `[пароль скрыт]` отклоняется |
+| 13 | `test_password_is_case_sensitive` | `password1` вместо `Password1` отклоняется |
 | 14 | `test_account_locks_after_five_wrong_attempts` | после 5 неверных попыток даже верный пароль не принимается: «Слишком много попыток» |
 | 15 | `test_show_password_button_toggles_field_type` | кнопка «Показать пароль» переключает `password` / `text` |
 | 16 | `test_link_to_registration` | ссылка «Регистрация» ведёт на `/register` |
@@ -133,7 +133,7 @@ tests/test_login_form.py::test_link_to_registration PASSED               [100%]
 ============================= 16 passed in 31.09s ==============================
 ```
 
-[Полный HTML-отчёт](results/pytest_report.html) и [исходный вывод pytest](results/pytest_output.txt) относятся к этому запуску. Предыдущий локальный прогон заменён материалами CI. Обновлённые снимки получены в указанном запуске. Снимки панели администратора оставлены от исходной проверки и отдельно не перезагружались.
+[Полный HTML-отчёт](results/pytest_report.html) и [исходный вывод pytest](results/pytest_output.txt) относятся к этому запуску. Предыдущий локальный прогон заменён материалами CI. Обновлённые снимки получены в указанном запуске. Снимки панели администратора оставлены от исходной проверки.
 
 ### Принтскрины
 Снимки сделаны автоматически в конце теста.
