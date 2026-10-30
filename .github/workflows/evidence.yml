@@ -1,0 +1,43 @@
+name: Evidence
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/**'
+      - '.github/workflows/evidence.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    env:
+      APP_DIR: ${{ github.workspace }}/app/ПР11_Веб-приложение_по_ТЗ/code
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/IG_MDK09.01
+          path: app
+          token: ${{ secrets.APP_REPO_TOKEN || github.token }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Зависимости
+        run: |
+          pip install -r "$APP_DIR/requirements.txt"
+          pip install -r "Задание_05_Смоук-тесты_Selenium_и_CI/code/requirements.txt"
+      - name: SQL, HTTP и два браузера
+        run: python tools/collect_evidence.py --app-dir "$APP_DIR" --output evidence
+      - name: Снимок при контрольном падении
+        run: python tools/check_failure_capture.py
+      - name: Материалы проверки
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidence
+          path: |
+            evidence/
+            failure-evidence/

@@ -9,6 +9,7 @@ jobs:
   selenium:
     runs-on: ubuntu-latest
     env:
+      SHOTS: '1'
       APP_DIR: ${{ github.workspace }}/app/ПР11_Веб-приложение_по_ТЗ/code
     steps:
       - name: Тесты (этот репозиторий)
@@ -32,12 +33,12 @@ jobs:
 
       - name: Задание 4 - автотест формы входа
         working-directory: Задание_04_Автотест_Selenium_форма_входа/code
-        run: python -m pytest -v --html=report.html --self-contained-html
+        run: python -m pytest -v --html=report.html --self-contained-html | tee pytest_output.txt
 
       - name: Задание 5 - смоук-тесты
         if: ${{ !cancelled() }}
         working-directory: Задание_05_Смоук-тесты_Selenium_и_CI/code
-        run: python -m pytest -v -m smoke --html=report.html --self-contained-html
+        run: python -m pytest -v -m smoke --html=report.html --self-contained-html | tee pytest_output.txt
 
       - name: Отчёты и снимки экрана
         if: ${{ !cancelled() }}
@@ -45,8 +46,10 @@ jobs:
         with:
           name: selenium-reports
           path: |
+            Задание_04_Автотест_Selenium_форма_входа/code/pytest_output.txt
             Задание_04_Автотест_Selenium_форма_входа/code/report.html
             Задание_04_Автотест_Selenium_форма_входа/code/artifacts/
+            Задание_05_Смоук-тесты_Selenium_и_CI/code/pytest_output.txt
             Задание_05_Смоук-тесты_Selenium_и_CI/code/report.html
             Задание_05_Смоук-тесты_Selenium_и_CI/code/artifacts/
           if-no-files-found: ignore

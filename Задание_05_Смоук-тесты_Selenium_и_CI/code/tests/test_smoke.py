@@ -1,4 +1,6 @@
+import os
 import uuid
+from pathlib import Path
 from datetime import datetime, timedelta
 
 import pytest
@@ -16,6 +18,10 @@ pytestmark = pytest.mark.smoke
 def test_smoke_1_home_page_shows_three_rooms(driver, app_url):
     home = HomePage(driver, app_url).open()
     assert len(home.room_cards()) == 3
+    if os.environ.get('SHOTS'):
+        artifacts = Path(__file__).resolve().parents[1] / 'artifacts'
+        artifacts.mkdir(exist_ok=True)
+        driver.save_screenshot(str(artifacts / 'smoke_home.png'))
     home.go_to_login()
     LoginPage(driver, app_url).wait_loaded()
 
